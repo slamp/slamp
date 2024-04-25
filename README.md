@@ -14,3 +14,5 @@ Here are some ideas to get you started:
 -->
 
 ![Metrics](/github-metrics.svg)
+
+![Metrics](https://metrics.lecoq.io/slamp?template=terminal&calendar=1&achievements=1&skyline=1&rss=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&calendar=false&calendar.limit=1&achievements=false&achievements.threshold=C&achievements.secrets=true&achievements.display=detailed&achievements.limit=0&skyline=false&skyline.year=current-year&skyline.frames=60&skyline.quality=0.5&skyline.compatibility=false&skyline.settings=%7B%0A%20%20%22url%22%3A%20%22https%3A%2F%2Fskyline.github.com%2F%24%7Blogin%7D%2F%24%7Byear%7D%22%2C%0A%20%20%22ready%22%3A%20%22%5B...document.querySelectorAll('span')%5D.map(span%20%3D%3E%20span.innerText).includes('Share%20on%20Twitter')%22%2C%0A%20%20%22wait%22%3A%201%2C%0A%20%20%22hide%22%3A%20%22button%2C%20footer%2C%20a%22%0A%7D%0A&rss=false&rss.source=https%3A%2F%2Fhachyderm.io%2F%40slamp.rss&rss.limit=4&config.timezone=Europe%2FParis)
