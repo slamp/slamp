@@ -19,3 +19,6 @@ jobs:
           template: terminal
           # filename: metrics.terminal.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          plugin_rss: yes
+          plugin_rss_source: https://hachyderm.io/@slamp.rss
+          plugin_rss_limit: 5
