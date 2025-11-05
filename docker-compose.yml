@@ -10,6 +10,8 @@ services:
       DB_ENGINE: sqlite
       
       # Default Recipe Settings
+      # WARNING: RECIPE_PUBLIC=true makes recipes publicly accessible without authentication
+      # Set to "false" for private recipe collections
       RECIPE_PUBLIC: "true"
       RECIPE_SHOW_NUTRITION: "true"
       RECIPE_SHOW_ASSETS: "true"
@@ -30,6 +32,8 @@ services:
       # SMTP_PASSWORD: your-app-password
       
       # Misc
+      # WARNING: ALLOW_SIGNUP=true allows anyone to create accounts
+      # Set to "false" after creating your admin account in production
       ALLOW_SIGNUP: "true"
       TZ: UTC
       

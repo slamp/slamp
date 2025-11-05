@@ -27,6 +27,14 @@ The `docker-compose.yml` file includes:
 - **Database**: SQLite (default)
 - **Storage**: Named volume `mealie-data`
 
+### Security Considerations
+
+**Important**: The default configuration is designed for easy setup but includes some settings that should be adjusted for production:
+
+1. **ALLOW_SIGNUP**: Set to `"true"` by default to allow initial account creation. After creating your admin account, set this to `"false"` to prevent unauthorized signups.
+2. **RECIPE_PUBLIC**: Set to `"true"` by default, making recipes publicly accessible. Set to `"false"` if you want private recipe collections.
+3. **Expose to Internet**: If exposing Mealie to the internet, consider using a reverse proxy with HTTPS (like Nginx or Traefik) and proper authentication.
+
 ### Features in v3.4.0
 
 - Per-device default activity settings (recipes, shopping lists, or meal planner)
