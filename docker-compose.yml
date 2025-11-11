@@ -1,0 +1,45 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:v3.4.0
+    container_name: mealie
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    environment:
+      # Database Settings
+      DB_ENGINE: sqlite
+      
+      # Default Recipe Settings
+      # WARNING: RECIPE_PUBLIC=true makes recipes publicly accessible without authentication
+      # Set to "false" for private recipe collections
+      RECIPE_PUBLIC: "true"
+      RECIPE_SHOW_NUTRITION: "true"
+      RECIPE_SHOW_ASSETS: "true"
+      RECIPE_LANDSCAPE_VIEW: "true"
+      RECIPE_DISABLE_COMMENTS: "false"
+      RECIPE_DISABLE_AMOUNT: "false"
+      
+      # Security Settings
+      TOKEN_TIME: 48
+      
+      # Email - Uncomment and configure if needed
+      # SMTP_HOST: smtp.gmail.com
+      # SMTP_PORT: 587
+      # SMTP_FROM_NAME: Mealie
+      # SMTP_AUTH_STRATEGY: TLS
+      # SMTP_FROM_EMAIL: your-email@gmail.com
+      # SMTP_USER: your-email@gmail.com
+      # SMTP_PASSWORD: your-app-password
+      
+      # Misc
+      # WARNING: ALLOW_SIGNUP=true allows anyone to create accounts
+      # Set to "false" after creating your admin account in production
+      ALLOW_SIGNUP: "true"
+      TZ: UTC
+      
+    volumes:
+      - mealie-data:/app/data
+    
+volumes:
+  mealie-data:
+    driver: local
